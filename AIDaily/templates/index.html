@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily - Latest AI Research Papers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily</h1>
+            <p class="subtitle">Latest Artificial Intelligence Research Papers</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Today's Featured Paper -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>⭐ Today's Featured Paper</span>
+                    </div>
+                    <button id="settingsBtn" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">⚙️ Settings</button>
+                </div>
+                <div class="card-body">
+                    <div id="todayPaperContainer">
+                        <div id="loadingState" style="text-align: center; padding: 2rem;">
+                            <p>Loading today's featured paper...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Papers Section -->
+            <div class="recent-papers">
+                <h2>📚 Recent Papers</h2>
+
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <span class="filter-label">Show papers from:</span>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" class="radio-input" name="timeFilter" value="7" checked>
+                                <span>Last 7 days</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" class="radio-input" name="timeFilter" value="30">
+                                <span>Last 30 days</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" class="radio-input" name="timeFilter" value="0">
+                                <span>All time</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button id="refreshHistoryBtn" class="btn btn-secondary">Refresh History</button>
+                </div>
+
+                <div id="recentPapersContainer">
+                    <div id="loadingRecent" style="text-align: center; padding: 2rem;">
+                        <p>Loading recent papers...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Use via API</a>
+                <a href="#" class="footer-link">Built with FastAPI</a>
+                <a href="#" class="footer-link">Settings</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Settings</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="form-group">
+                <label for="apiKeyInput" class="form-label">Google Gemini API Key</label>
+                <input type="password" id="apiKeyInput" class="form-input" placeholder="Enter your Gemini API key">
+                <div class="form-help">
+                    This API key is used to generate detailed summaries of research papers. Your key is stored locally and never sent to our servers.
+                    <br><br>
+                    <strong>How to get your API key:</strong>
+                    <br>1. Visit <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>
+                    <br>2. Sign in with your Google account
+                    <br>3. Click "Create API Key"
+                    <br>4. Copy and paste the key here
+                </div>
+            </div>
+            <div class="form-group">
+                <button id="saveApiKeyBtn" class="btn btn-primary">Save API Key</button>
+                <button id="clearApiKeyBtn" class="btn btn-danger" style="margin-left: 0.5rem;">Clear Key</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
