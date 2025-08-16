@@ -192,6 +192,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [uv](https://github.com/astral-sh/uv) for dependency management
 
-## 📞 Support
-
-If you encounter any issues or have questions, please [open an issue](https://github.com/yubraaj11/AIDaily/issues) on GitHub.
