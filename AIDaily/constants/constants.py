@@ -34,13 +34,13 @@ PAPER_DIR.mkdir(parents=True, exist_ok=True)
 # Ensure index.json exists
 # ---------------------------
 if not INDEX_PATH.exists():
-    INDEX_PATH.write_text(json.dumps({}, indent=2), encoding='utf-8')
+	INDEX_PATH.write_text(json.dumps({}, indent=2), encoding='utf-8')
 
 # ---------------------------
 # Ensure rotation.txt exists
 # ---------------------------
 if not ROTATION_FILE.exists():
-    ROTATION_FILE.write_text('0', encoding='utf-8')
+	ROTATION_FILE.write_text('0', encoding='utf-8')
 
 # ---------------------------
 # External API
@@ -51,8 +51,8 @@ ARXIV_API = 'https://export.arxiv.org/api/query'
 # Categories to fetch papers from
 # ---------------------------
 CATEGORIES = [
-    'cat:cs.AI',  # Artificial Intelligence
-    'cat:cs.LG',  # Machine Learning
-    'cat:cs.CL',  # Natural Language Processing
-    'cat:cs.CV',  # Computer Vision
+	'cat:cs.AI',  # Artificial Intelligence
+	'cat:cs.LG',  # Machine Learning
+	'cat:cs.CL',  # Natural Language Processing
+	'cat:cs.CV',  # Computer Vision
 ]

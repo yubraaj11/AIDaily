@@ -10,7 +10,7 @@ import json
 import logging
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
 from fastapi.exceptions import HTTPException
 
 from AIDaily.configs import setup_logging
@@ -143,9 +143,6 @@ async def get_paper(paper_id: str):
 
 	paper_data = json.loads(paper_files[0].read_text())
 	return {'paper': paper_data}
-
-
-from fastapi import Query
 
 
 @v1_router.get('/history')

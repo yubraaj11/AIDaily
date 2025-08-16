@@ -1,5 +1,5 @@
 """
-AI Daily App - process_pdf
+AI Daily App - ./services/process_pdf.py
 Author: Yubraj Sigdel
 © 2025 Yubraj Sigdel. All rights reserved.
 
@@ -10,7 +10,7 @@ PDF files. It provides functionality to:
     3. Summarize extracted text using the Gemini API in a structured format.
 
 Usage:
-    from process_pdf import ProcessPDF
+    from AIDaily.services import ProcessPDF
     pdf_processor = ProcessPDF()
     pdf_content = await pdf_processor.download_pdf(pdf_url)
     text = pdf_processor.extract_text_from_pdf(pdf_content)

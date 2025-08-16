@@ -1,5 +1,5 @@
 """
-AI Daily App - arxiv_fetcher
+AI Daily App - ./services/arxiv_fetcher.py
 Author: Yubraj Sigdel
 © 2025 Yubraj Sigdel. All rights reserved.
 
@@ -8,7 +8,7 @@ research papers from the arXiv API. It selects a category, fetches recent papers
 and returns a securely chosen paper with metadata such as title, authors, PDF URL, and summary.
 
 Usage:
-    from arxiv_fetcher import ArxivFetcher
+    from AIDaily.services import ArxivFetcher
     fetcher = ArxivFetcher()
     paper = await fetcher.fetch_one_paper()
 """
