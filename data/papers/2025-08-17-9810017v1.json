@@ -1,0 +1,12 @@
+{
+  "id": "9810017v1",
+  "title": "General Theory of Image Normalization",
+  "url": "http://arxiv.org/abs/cs/9810017v1",
+  "authors": [
+    "Stephen L. Adler"
+  ],
+  "published": "1998-10-19T20:46:16Z",
+  "summary": "We give a systematic, abstract formulation of the image normalization method as applied to a general group of image transformations, and then illustrate the abstract analysis by applying it to the hierarchy of viewing transformations of a planar object.",
+  "doi": null,
+  "pdf_url": "https://arxiv.org/pdf/cs/9810017v1"
+}
