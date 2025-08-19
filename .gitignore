@@ -33,7 +33,7 @@ Thumbs.db
 *.txt
 
 # Tests
-tests/.pytest_cache/
+# tests/.pytest_cache/
 
 # Notebooks
 notebooks/
