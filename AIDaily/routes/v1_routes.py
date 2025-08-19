@@ -146,7 +146,7 @@ async def get_paper(paper_id: str):
 
 
 @v1_router.get('/history')
-async def get_history(date_range: str = Query('all', regex='^(7|30|all)$')):
+async def get_history(date_range: str = Query('all', pattern='^(7|30|all)$')):
 	"""
 	List papers grouped by date.
 	date_range: '7' for last 7 days, '30' for last 30 days, 'all' for all time

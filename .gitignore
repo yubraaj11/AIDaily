@@ -29,9 +29,11 @@ Thumbs.db
 
 # Logs
 *.log
+*.json
+*.txt
 
 # Tests
-tests/.pytest_cache/
+# tests/.pytest_cache/
 
 # Notebooks
 notebooks/
