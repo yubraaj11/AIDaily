@@ -25,7 +25,7 @@ from typing import Optional
 
 import google.generativeai as genai
 import httpx
-import PyPDF2
+from pypdf import PdfReader
 from fastapi import HTTPException
 
 from AIDaily.configs import setup_logging
@@ -63,7 +63,7 @@ class ProcessPDF:
 			raise HTTPException(500, detail=f'Failed to download PDF: {str(e)}') from e
 
 	@staticmethod
-	def _extract_text_from_pdf_page(page: PyPDF2._page.PageObject, page_num: int) -> str:
+	def _extract_text_from_pdf_page(page, page_num: int) -> str:
 		"""Extract and clean text from a single PDF page."""
 		try:
 			text = page.extract_text() or ''
@@ -91,7 +91,7 @@ class ProcessPDF:
 
 			text = ''
 			with open(temp_file_path, 'rb') as pdf_file:
-				pdf_reader = PyPDF2.PdfReader(pdf_file)
+				pdf_reader = PdfReader(pdf_file)
 				logger.info(f'PDF has {len(pdf_reader.pages)} pages')
 
 				# Decrypt if necessary
